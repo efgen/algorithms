@@ -1,13 +1,13 @@
 package net.efgen.algorithms;
 
 public class SuffixAutomata {
-    private Node root;
-    private Node last;
+    private final Node root;
+    private  Node last;
 
     private class Node {
         Node link;
-        Node[] next;
-        int len;
+        final Node[] next;
+        final int len;
         boolean terminal;
 
         Node(Node o, int len) {
