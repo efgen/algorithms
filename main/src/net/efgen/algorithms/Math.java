@@ -10,6 +10,7 @@ public class Math {
         }
         return a;
     }
+    
     public static int gcd(int a, int b) {
         while (b > 0) {
             int t = a%b;
@@ -22,13 +23,13 @@ public class Math {
     public static long modPow(long x, long pow, long mod) {
         long res = 1;
         while (pow > 0) {
-            if ((pow&2) != 0) {
+            if ((pow&1) != 0) {
                 res = res * x % mod;
             }
             x = x * x % mod;
             pow >>= 1;
         }
-        return res;
+        return res % mod;
     }
 
     public static long modInverse(long x, long p) {
